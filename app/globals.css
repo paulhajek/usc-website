@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background-color: #f7f9fc;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+  font-family: var(--font-sans);
+}
+
+a {
+  @apply text-brand-blue hover:text-brand-dark transition-colors;
+}
+
+.container-narrow {
+  @apply max-w-5xl mx-auto px-4 md:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-12 md:py-16;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-colors;
+}
+
+.btn-primary {
+  @apply bg-brand-blue text-white hover:bg-brand-dark;
+}
+
+.btn-secondary {
+  @apply border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full bg-brand-light px-3 py-1 text-xs font-semibold text-brand-blue;
+}
+
+input, textarea {
+  @apply border border-slate-300 focus:border-brand-blue focus:ring-brand-blue;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1f4b99;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
